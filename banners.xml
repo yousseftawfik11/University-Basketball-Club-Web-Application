@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>Images/misrTravel.jpg</ImageUrl>
+		<NavigateUrl>https://www.misrtravel.net/</NavigateUrl>
+		<AlternateText>Misr Travel Ad</AlternateText>
+		<Impressions>30</Impressions>
+		<Keyword>Travel Agencies</Keyword>
+	</Ad>
+	<Ad>
+
+	</Ad>
+</Advertisements>

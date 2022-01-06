@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head runat="server">
+
+    <title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+            <%--for the header name--%>
+        </asp:ContentPlaceHolder>
+    </title>
+
+
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .center {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .auto-style1 {
+            margin-bottom: 0px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="cssLinks" runat="server">
+        <%--for the additional css links--%>
+    </asp:ContentPlaceHolder>
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+                <div class="container">
+                    <a class="navbar-brand logo" href="#">INTI Basketball Club</a>
+                    <a data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></a>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="Default.aspx">Home</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="Enroll.aspx">Enroll</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="ProfilePage.aspx">Profile Page</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="Rent.aspx">Rent</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="admincontrol.aspx">Control panel</a></li>
+                            <li class="nav-item" role="presentation">
+                                <asp:LinkButton class="nav-link" ID="LbuserStatus" CausesValidation="false" runat="server" Text="" OnClick="LbuserStatus_Click"></asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <%-- message to the user using the session..... it will be shown to the user one time for evey action like wrong password...--%>
+        <div id="divMessage" runat="server">
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="PageContent" runat="server">
+                <%--for the page content--%>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+<script src="assets/js/smoothproducts.min.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/Simple-Slider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/freelancer.js"></script>
+<script src="assets/js/Simple-Slider.js"></script>
+<asp:ContentPlaceHolder ID="jsLinks" runat="server">
+    <%--for the additional js links--%>
+</asp:ContentPlaceHolder>
+<div id="footer" class="center">
+    <a href="https://web.facebook.com/intibasketballleague" class="fa fa-facebook" style="width: 72px" target="_blank"></a>
+    <a href="https://www.instagram.com/intibasketballclub/" class="fa fa-instagram" style="width: 72px" target="_blank"></a>
+    <p>&copy;All CopyRights Reserved 2021</p>
+</div>
+</html>
